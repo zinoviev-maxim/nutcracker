@@ -11,4 +11,4 @@ def hello_world():
 if __name__ == "__main__":
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
     context.load_cert_chain(certfile='ssl/certificate_ca.crt', keyfile='ssl/certificate.key')
-    app.run(host="0.0.0.0", debug=True, port=5000)
+    app.run(host="0.0.0.0", debug=True, port=5000, ssl_context=context)
